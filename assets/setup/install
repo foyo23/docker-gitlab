@@ -34,7 +34,7 @@ sudo -u git -H ./bin/install
 # install gitlab, use local copy if available
 sudo -u git -H mkdir -p /home/git/gitlab
 if [ -f /app/setup/gitlabhq-${GITLAB_VERSION}.tar.gz ]; then
-  sudo -u git -H tar -zvxf /app/setup/gitlabhq-${GITLAB_VERSION}.tar.gz --strip=1 -C /home/git/gitlab/
+  sudo -u git -H tar -zvxf /app/setup/gitlabhq-ms-dev-${GITLAB_VERSION}.tar.gz --strip=1 -C /home/git/gitlab/
 else
   wget "https://github.com/foyo23/gitlabhq-ms-dev/archive/v${GITLAB_VERSION}.tar.gz" -O - | tar -zvxf - --strip=1 -C /home/git/gitlab/
   chown -R git:git /home/git/gitlab/
